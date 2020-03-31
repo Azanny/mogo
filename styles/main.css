@@ -52,6 +52,11 @@ body header {
   justify-content: space-between;
   flex-direction: column;
 }
+@media (max-width: 467px) {
+  body header {
+    height: 700px;
+  }
+}
 body header #eagle {
   position: absolute;
   width: 100%;
@@ -164,6 +169,12 @@ body header > div {
   padding-bottom: 150px;
   box-sizing: border-box;
 }
+@media (max-width: 467px) {
+  body header > div {
+    padding-bottom: 100px;
+    padding-top: 50px;
+  }
+}
 body header > div h1 {
   font-size: 150px;
   text-transform: uppercase;
@@ -187,6 +198,12 @@ body header > div h1 {
     font-size: 80px;
   }
 }
+@media (max-width: 467px) {
+  body header > div h1 {
+    font-size: 56px;
+    line-height: 1.3;
+  }
+}
 body header > div h2 {
   font-size: 72px;
   font-family: "Kaushan Script";
@@ -195,6 +212,11 @@ body header > div h2 {
 @media (max-width: 767px) {
   body header > div h2 {
     font-size: 50px;
+  }
+}
+@media (max-width: 467px) {
+  body header > div h2 {
+    font-size: 34px;
   }
 }
 body header > div #moreBtn {
@@ -211,6 +233,11 @@ body header > div #moreBtn {
   transition: background-color 0.2s ease;
   cursor: pointer;
   z-index: 3;
+}
+@media (max-width: 467px) {
+  body header > div #moreBtn {
+    width: 180px;
+  }
 }
 body header > div #moreBtn:hover {
   background-color: #fc707b;
@@ -285,6 +312,11 @@ body #about .card {
     width: 220px;
   }
 }
+@media (max-width: 467px) {
+  body #about .card {
+    width: 86%;
+  }
+}
 body #about .card img {
   width: 100%;
   height: 100%;
@@ -348,22 +380,38 @@ body #about .card:hover::after {
 }
 body #numbers {
   width: 100%;
-  height: 270px;
+  min-height: 270px;
   background-color: #95e1d3;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 467px) {
+  body #numbers {
+    flex-direction: column;
+  }
+}
 body #numbers .numberCard {
   width: 240px;
+}
+@media (max-width: 467px) {
+  body #numbers .numberCard {
+    width: 100%;
+    height: 225px;
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 body #numbers .numberCard p {
   text-transform: uppercase;
   font-size: 14px;
   color: #fff;
 }
-@media (max-width: 767px) {
+@media (min-width: 468px) and (max-width: 767px) {
   body #numbers .numberCard p {
     font-size: 12px;
     text-transform: capitalize;
@@ -374,7 +422,7 @@ body #numbers .numberCard .number {
   font-weight: bold;
   margin: 0;
 }
-@media (max-width: 767px) {
+@media (min-width: 468px) and (max-width: 767px) {
   body #numbers .numberCard .number {
     font-size: 50px;
   }
@@ -401,10 +449,24 @@ body #services #serviceList .serviceListItem {
     padding: 0 5px 30px 40px;
   }
 }
+@media (max-width: 467px) {
+  body #services #serviceList .serviceListItem {
+    width: 100%;
+    height: 170px;
+    padding: 10% 3% 30px 70px;
+    border-bottom: 1px solid #ccc;
+  }
+}
 body #services #serviceList .serviceListItem img {
   position: absolute;
   left: 0;
   top: 20px;
+}
+@media (max-width: 467px) {
+  body #services #serviceList .serviceListItem img {
+    left: 20px;
+    top: 40%;
+  }
 }
 body #services #serviceList .serviceListItem h4 {
   text-transform: uppercase;
@@ -418,6 +480,11 @@ body #services #serviceList .serviceListItem h4 {
 body #services #serviceList .serviceListItem p {
   font-size: 12px;
   text-align: left;
+}
+@media (max-width: 467px) {
+  body #services #serviceList .serviceListItem p {
+    max-width: 300px;
+  }
 }
 body #design {
   height: 940px;
@@ -433,9 +500,20 @@ body #design .iphone {
   left: 60%;
   bottom: 0;
 }
+@media (max-width: 467px) {
+  body #design .iphone {
+    left: 40%;
+  }
+}
 body #design .ipad {
   position: absolute;
   bottom: 100px;
+}
+@media (max-width: 467px) {
+  body #design .ipad {
+    width: 100%;
+    bottom: 150px;
+  }
 }
 body #design .lake {
   width: 100%;
@@ -458,27 +536,29 @@ body #whatWeDo > div {
   justify-content: center;
 }
 body #whatWeDo > div #iam {
-  width: 570px;
+  max-width: 570px;
+  width: 45%;
   height: 380px;
   display: block;
   background: url('../images/i_am.png') no-repeat;
+  background-origin: center left;
 }
-@media (max-width: 767px) {
+@media (max-width: 467px) {
   body #whatWeDo > div #iam {
-    width: 45%;
-    background-origin: center left;
+    width: 90%;
   }
 }
 body #whatWeDo > div #accordion {
-  width: 550px;
+  max-width: 550px;
+  width: 45%;
   height: 410px;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 467px) {
   body #whatWeDo > div #accordion {
-    width: 45%;
+    width: 90%;
   }
 }
 body #whatWeDo > div #accordion .accLi {
@@ -545,6 +625,11 @@ body #slider {
   max-width: 1200px;
   overflow: hidden;
 }
+@media (max-width: 467px) {
+  body #slider {
+    height: 400px;
+  }
+}
 body #slider .slide {
   float: left;
   height: 330px;
@@ -555,9 +640,20 @@ body #slider .slide {
   align-items: center;
   justify-content: space-evenly;
 }
+@media (max-width: 467px) {
+  body #slider .slide {
+    height: 400px;
+  }
+}
 body #slider .slide .humanInfo {
   display: flex;
   flex-direction: row;
+}
+@media (max-width: 467px) {
+  body #slider .slide .humanInfo {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 body #slider .slide .humanInfo img {
   margin: 0 10px;
@@ -576,6 +672,12 @@ body #slider .slide .humanInfo p {
 @media (max-width: 767px) {
   body #slider .slide .humanInfo p {
     font-size: 18px;
+  }
+}
+@media (max-width: 467px) {
+  body #slider .slide .humanInfo p {
+    padding: 0;
+    text-align: center;
   }
 }
 body #slider .slide .humanInfo p span {
@@ -775,6 +877,14 @@ body footer #instagram .picGrid {
   }
   body footer #instagram .picGrid > img:last-child {
     display: none;
+  }
+}
+@media (max-width: 467px) {
+  body footer #instagram .picGrid {
+    max-width: 300px;
+  }
+  body footer #instagram .picGrid > img:last-child {
+    display: inline-block;
   }
 }
 body footer #instagram h3 {

@@ -739,6 +739,7 @@ body footer #mogo {
 @media (max-width: 767px) {
   body footer #mogo {
     width: 90%;
+    min-width: 300px;
   }
 }
 body footer #mogo h1 {
@@ -803,6 +804,11 @@ body footer #mogo #subscription input {
   font-style: italic;
   box-sizing: border-box;
   padding-left: 5px;
+}
+@media (max-width: 467px) {
+  body footer #mogo #subscription input {
+    width: 180px;
+  }
 }
 body footer #mogo #subscription input::placeholder {
   color: #999;
